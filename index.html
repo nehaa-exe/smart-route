@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartRoute - Smart Travel Companion</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+        <div class="logo">SmartRoute</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#map">Explore Map</a>
+            <a href="#about">About</a>
+            <a href="#helpline">Contact Us</a>
+        </nav>
+    </header>
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Your Journey, Made Smarter!</h1>
+        <p>Find CNG stations, EV charging points and car repair services on your route.</p>
+        <a href="#map" class="hero-btn">Explore Map</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+             alt="Scenic road trip">
+    </div>
+</section>
+
+
+
+
+    <!-- Main Section -->
+
+    <section class="hero search-hero">
+
+        <h1>Travel Smarter, Travel Safer.</h1>
+
+        <p>
+            Find CNG stations, EV charging points,
+            fuel stations and roadside assistance
+            all in one place.
+        </p>
+
+        <div class="search-box">
+
+        <input
+           type="text"
+           id="destination-input"
+           placeholder="Enter your destination..."
+>
+
+<select id="service-category">
+    <option value="all">All Services</option>
+    <option value="cng">CNG Stations</option>
+    <option value="ev">EV Charging</option>
+    <option value="fuel">Fuel Stations</option>
+    <option value="repair">Car Repair</option>
+    <option value="emergency">Emergency Help</option>
+</select>
+
+
+
+<button onclick="searchDestination()">Search</button>    
+<button onclick="showMyLocation()">📍 My Current Location</button>
+        </div>
+
+    </section>
+
+
+    <!-- Services Section -->
+
+    <section id="services">
+
+        <h2>Explore Our Services</h2>
+
+        <div class="service-container">
+
+<div class="service-card" onclick="showCNG()">
+    <img src="cn.jpg" alt="CNG Fuel Station">
+    <h3>CNG Stations</h3>
+    <p>Find nearby CNG stations.</p>
+</div>
+
+<div class="service-card" onclick="showEV()">
+    <img src="ev.jpg" alt="EV Charging Station">
+    <h3>EV Charging</h3>
+    <p>Locate EV charging points.</p>
+</div>
+
+<div class="service-card" onclick="showFuel()">
+    <img src="https://images.unsplash.com/photo-1545262810-77515befe149"
+         alt="Fuel Station">
+    <h3>Fuel Stations</h3>
+    <p>Find nearby petrol pumps.</p>
+</div>
+
+<div class="service-card" onclick="showRepair()">
+    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3"
+         alt="Car Repair">
+    <h3>Car Repair</h3>
+    <p>Find nearby repair shops.</p>
+</div>
+
+<div class="service-card" onclick="showEmergency()">
+    <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f"
+         alt="Emergency Assistance">
+    <h3>Emergency Help</h3>
+    <p>Get roadside assistance information.</p>
+</div>
+
+</div>
+</section>
+    <!-- Map Section -->
+
+    <section id="map">
+
+        <h2>Explore Nearby Locations</h2>
+
+   
+<p>Discover useful services during your journey.</p>
+
+<div class="map-legend">
+    <h3>Map Legend</h3>
+    <span>🟢 CNG Station</span>
+    <span>🔵 EV Charging</span>
+    <span>🟠 Fuel Station</span>
+    <span>🟣 Car Repair</span>
+    <span>🔴 Emergency Help</span>
+</div>
+
+<div id="travel-map"></div>
+
+<p class="demo-notice">
+    Note: The locations displayed on this map are sample demo
+    locations. Real-time availability and station details are
+    not yet verified.
+</p>
+
+</section>
+
+
+<!-- EMERGENCY HELPLINE SECTION -->
+
+
+    <!-- About Section -->
+<section id="helpline" class="helpline-section">
+    <h2>Emergency Helpline</h2>
+    <p>Need help during your journey? Contact these services.</p>
+
+    <div class="helpline-cards">
+        <div class="helpline-card">
+            <h3>112</h3>
+            <p>Emergency Response</p>
+            <a href="tel:112">Call Now</a>
+        </div>
+
+        <div class="helpline-card">
+            <h3>1033</h3>
+            <p>National Highway Helpline</p>
+            <a href="tel:1033">Call Now</a>
+        </div>
+
+        <div class="helpline-card">
+            <h3>108</h3>
+            <p>Ambulance Service</p>
+            <a href="tel:108">Call Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+
+    <h2>About SmartRoute</h2>
+
+    <p>
+        SmartRoute helps drivers find essential
+        travel services and makes long journeys
+        more convenient.
+    </p>
+
+</section>
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 SmartRoute | Your Smart Travel Companion</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="./script.js"></script>
+</body>
+</html>

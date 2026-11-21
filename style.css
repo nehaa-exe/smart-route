@@ -1,0 +1,429 @@
+
+/* SMARTROUTE WEBSITE DESIGN */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: #123b70;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #9dc8ff;
+}
+
+/* HERO SECTION */
+
+.hero {
+    text-align: center;
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #dceaff, #ffffff);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #123b70;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #526780;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+/* SEARCH BOX */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    width: 350px;
+    max-width: 100%;
+    padding: 14px;
+    border: 1px solid #b9cce5;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 14px 25px;
+    background-color: #123b70;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* SERVICES SECTION */
+
+#services {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+#services h2,
+#map h2,
+#about h2 {
+    font-size: 30px;
+    color: #123b70;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 22px;
+}
+
+
+.service-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    text-align: center;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MAP SECTION */
+
+#map {
+    padding: 60px 7%;
+    text-align: center;
+    background-color: #eaf2fc;
+    box-sizing: border-box;
+}
+.map-placeholder {
+    background-color: white;
+    border: 2px dashed #8daed6;
+    border-radius: 12px;
+    padding: 100px 20px;
+    color: #123b70;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    color: #526780;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #123b70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* INTERACTIVE MAP */
+
+#travel-map {
+    display: block;
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    border-radius: 15px;
+    border: 2px solid #d0dfef;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* MAP LEGEND */
+
+#map .map-legend {
+    background: #ffffff;
+    width: fit-content;
+    max-width: 100%;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 20px;
+    box-shadow: 0 4px 15px rgba(20, 45, 78, 0.09);
+    border: 1px solid #e5edf5;
+    box-sizing: border-box;
+}
+
+#map .map-legend h3 {
+    flex-basis: 100%;
+    text-align: center;
+    color: #142d4e;
+    font-size: 18px;
+    margin: 0;
+}
+
+#map .map-legend span {
+    font-size: 14px;
+    color: #334155;
+    white-space: nowrap;
+}
+
+/* DEMO NOTICE */
+
+.demo-notice {
+    background: #fff4e5;
+    color: #805b20;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-left: 4px solid #e5a12b;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* MOBILE RESPONSIVE MAP */
+
+@media (max-width: 600px) {
+    #travel-map {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    #map .map-legend {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    #map .map-legend span {
+        white-space: normal;
+    }
+}
+/* SERVICE CARD IMAGE SIZE FIX */
+
+#services .service-card {
+    overflow: hidden;
+    min-width: 0;
+}
+
+#services .service-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* SEARCH HERO SECTION */
+
+.search-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px 20px;
+    margin: 0;
+    gap: 15px;
+    background: linear-gradient(135deg, #dceaff, #ffffff);
+    border-radius: 0;
+}
+
+.search-hero h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+/* MAIN HERO LAYOUT FIX */
+
+.hero:not(.search-hero) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 40px;
+    margin: 25px;
+}
+
+.hero:not(.search-hero) .hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero:not(.search-hero) .hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero:not(.search-hero) .hero-image img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+    .hero:not(.search-hero) {
+        flex-direction: column;
+        padding: 20px;
+    }
+}.search-hero p {
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+/* EMERGENCY HELPLINE CARDS */
+
+.helpline-section {
+    padding: 55px 25px;
+    text-align: center;
+    background: #f3f7fc;
+}
+
+.helpline-section h2 {
+    color: #142d4e;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.helpline-section > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.helpline-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.helpline-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(20, 45, 78, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.helpline-card:hover {
+    transform: translateY(-5px);
+}
+
+.helpline-card h3 {
+    color: #d93636;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.helpline-card p {
+    color: #475569;
+    margin-bottom: 22px;
+}
+
+.helpline-card a {
+    display: inline-block;
+    background: #173b68;
+    color: white;
+    padding: 11px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.helpline-card a:hover {
+    background: #24558e;
+}
+
+@media (max-width: 700px) {
+    .helpline-cards {
+        grid-template-columns: 1fr;
+    }
+}
